@@ -1,11 +1,20 @@
 
+
 header, section {
     font-family: 'century-gothic', Verdana;
+    font-size: 1.2em;
 }
 
 h1#page-title{
     color: darkblue;
     margin: 15px;
+    a {
+        margin-right: 60px;
+        color: grey;
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
 .main {
@@ -13,7 +22,7 @@ h1#page-title{
     flex-direction: row;
     justify-content: space-around;
     .left {
-        width: 20%;
+        width: 25%;
         section {
             width: 100%;
         }

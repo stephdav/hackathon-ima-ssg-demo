@@ -2,7 +2,8 @@
 header {
     height: 40px;
     h1 {
-        font-size: 1em;
+        font-size: 30px;
+        font-weight: 800;
         margin: 10px;
         text-align: center;
         border-bottom: 1px solid black;
@@ -10,6 +11,10 @@ header {
     img {
         display: inline;
         max-height: 40px;
-        float: left;
+        margin-right: 40px;
+        margin-left: -40px;
     }
+}
+section {
+    margin: 0 30px;
 }
