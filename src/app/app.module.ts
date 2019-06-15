@@ -7,10 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VueAssureurComponent } from './components/vue-assureur/vue-assureur.component';
 
+import { OutilMetierComponent } from './components/outil-metier/outil-metier.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    VueAssureurComponent
+    VueAssureurComponent,
+    OutilMetierComponent,
   ],
   imports: [
     BrowserAnimationsModule,
