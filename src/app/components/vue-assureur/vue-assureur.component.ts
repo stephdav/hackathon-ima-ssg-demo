@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Form, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-vue-assureur',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VueAssureurComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
+
+  public infosPersoForm: FormGroup;
 
   ngOnInit() {
+    this.initForms();
   }
 
+  private initForms() {
+    this.infosPersoForm = this.fb.group({
+      firstName: [''],
+      lastName: [''],
+    });
+
+  }
 }

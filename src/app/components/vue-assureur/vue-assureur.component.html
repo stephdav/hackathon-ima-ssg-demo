@@ -4,17 +4,21 @@
 <section>
   <div>
     <h1>Infos personnelles</h1>
-    <div>
+    <form [formGroup]="infosPersoForm">
       <h2></h2>
-      <label>Prénom(s)</label><p></p>
-      <label>Nom</label><p></p>
-      <label>Date de naissance</label><p></p>
-      <label>Lieu de naissance</label><p></p>
-    </div>
+      <label for="lastName">Nom</label>
+      <input formControlName="lastName" type="text" class="form-control" id="lastName" disabled>
+      <label for="firstName">Prénom(s)</label>
+      <input formControlName="firstName" type="text" class="form-control" id="firstName" disabled>
+      <label>Date de naissance</label>
+      <label>Lieu de naissance</label>
+    </form>
     <div>
       <h2>Coordonnées</h2>
-      <label>Adresse</label><p></p>
-      <label>Email</label><p></p>
+      <label>Adresse</label>
+      <p></p>
+      <label>Email</label>
+      <p></p>
     </div>
   </div>
 </section>
