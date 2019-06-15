@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Person } from 'src/app/models/Person';
+import { PersonneService } from 'src/app/service/personne.service';
 
 @Component({
   selector: 'app-client-overview',
@@ -8,20 +10,23 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class ClientOverviewComponent implements OnInit {
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private personService: PersonneService) { }
 
+  public client: Person;
   public infosPersoForm: FormGroup;
 
   ngOnInit() {
+    this.client = this.personService.client;
     this.initForms();
   }
 
   private initForms() {
     this.infosPersoForm = this.fb.group({
-      firstName: [ 'Alain' ],
-      lastName: [  'De Trois-Quatre'],
-      birthDate: [{ value: '', disabled: true }],
-      birthPlace: [{ value: '', disabled: true }]
+      id: [this.client.id],
+      firstName: [ this.client.firstName ],
+      lastName: [ this.client.lastName],
+      birthDate: [{ value: this.client.birthDate, disabled: true }],
+      birthPlace: [{ value: this.client.birthPlace, disabled: true }]
     });
   }
 }
