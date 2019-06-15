@@ -5,20 +5,19 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { VueAssureurComponent } from './components/vue-assureur/vue-assureur.component';
-
 import { OutilMetierComponent } from './components/outil-metier/outil-metier.component';
+import { VueAssureurComponent } from './components/vue-assureur/vue-assureur.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VueAssureurComponent,
     OutilMetierComponent,
+    VueAssureurComponent
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
