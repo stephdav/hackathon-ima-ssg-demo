@@ -8,7 +8,22 @@ h1#page-title{
     margin: 15px;
 }
 
-.line {
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .left {
+        width: 20%;
+        section {
+            width: 100%;
+        }
+    }
+    .right {
+        flex-grow: 1;
+    }
+}
+
+.line, .left {
     h1 {
        width: 100%; 
     }

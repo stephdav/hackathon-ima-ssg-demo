@@ -12,7 +12,7 @@ export class PersonneService {
   private _client: Person;
 
   public getTestPerson(id?: number): Person {
-    return new Person(testPerson.default as object);
+    return new Person(testPerson as any);
   }
 
   get client() {

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Person } from 'src/app/models/Person';
 import { PersonneService } from 'src/app/service/personne.service';
+import { Contrat } from 'src/app/models/Contrat';
 
 @Component({
   selector: 'app-client-overview',
@@ -24,8 +25,8 @@ export class ClientOverviewComponent implements OnInit {
   private initForms() {
     this.infosPersoForm = this.fb.group({
       id: [this.client.id],
-      firstName: [ this.client.firstName ],
-      lastName: [ this.client.lastName],
+      firstName: [this.client.firstName],
+      lastName: [this.client.lastName],
       birthDate: [{ value: this.client.birthDate, disabled: true }],
       birthPlace: [{ value: this.client.birthPlace, disabled: true }]
     });
@@ -38,5 +39,9 @@ export class ClientOverviewComponent implements OnInit {
       city: this.client.address.city,
       country: this.client.address.country
     });
+  }
+
+  public only(filter: string, contract: Contrat[]) {
+    return contract.filter(c => c.univers === filter);
   }
 }

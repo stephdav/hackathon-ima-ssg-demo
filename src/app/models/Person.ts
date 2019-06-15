@@ -1,10 +1,12 @@
 import { Address } from './Address';
 import { Contact } from './Contact';
 import { Contrat } from './Contrat';
+import { Opportunity } from './Opportunity';
 
 export class Person {
 
-    constructor(object: any) {
+    constructor(obj: any) {
+        const object = obj.default;
         if (object.id) { this.id = object.id; }
         if (object.firstName) { this.firstName = object.firstName; }
         if (object.lastName) { this.lastName = object.lastName; }
@@ -24,6 +26,12 @@ export class Person {
                 this.contracts.push(new Contrat(h));
             });
         }
+        if (object.opportunities) {
+            this.opportunities = new Array<Opportunity>();
+            object.opportunities.map(h => {
+                this.opportunities.push(new Opportunity(h));
+            });
+        }
         return this;
     };
 
@@ -36,4 +44,5 @@ export class Person {
     email?: string;
     history?: Contact[];
     contracts?: Contrat[];
+    opportunities?: Opportunity[];
 }

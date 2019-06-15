@@ -39,5 +39,19 @@
             "desc": "Contrat d'assurance habitation standard",
             "univers": "HABITATION"
         }
+    ],
+    "opportunities": [
+        {
+            "desc": "Déménagement",
+            "trust": 80
+        },
+        {
+            "desc": "Remplacement voiture",
+            "trust": 90
+        },
+        {
+            "desc": "Bébé",
+            "trust": 60
+        }
     ]
 }
