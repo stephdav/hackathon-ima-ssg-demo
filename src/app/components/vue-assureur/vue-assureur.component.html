@@ -2,27 +2,5 @@
   <h1>Vue assureur</h1>
 </header>
 <section>
-  <div class="line">
-    <form [formGroup]="infosPersoForm">
-      <h1>Infos personnelles</h1>
-      <h2></h2>
-      <label for="lastName">Nom</label>
-      <input formControlName="lastName" type="text" class="form-control" id="lastName">
-      <label for="firstName">Prénom(s)</label>
-      <input formControlName="firstName" type="text" class="form-control" id="firstName">
-      <label for="birthDate">Date de naissance</label>
-      <input formControlName="birthDate" type="date" class="form-control" id="birthDate">
-      <label for="birthPlace">Lieu de naissance</label>
-      <input formControlName="birthPlace" type="text" class="form-control" id="birthPlace">
-    </form>
-    <form>
-      <h1>Coordonnées</h1>
-      <label>Adresse</label>
-      <p></p>
-      <label>Email</label>
-      <p></p>
-    </form>
-  </div>
-  <div class="line">
-  </div>
+  <router-outlet></router-outlet>
 </section>

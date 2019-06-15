@@ -1,0 +1,41 @@
+
+header, section {
+    font-family: 'century-gothic', Verdana;
+}
+
+h1#page-title{
+    color: darkblue;
+    margin: 15px;
+}
+
+.line {
+    /* flex */
+    display: flex;
+    flex-flow: row nowrap ;
+    justify-content:space-around ;
+    align-items: flex-start;
+
+    /* forme */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 3px;
+
+    /* STYYYLE */
+    background-color: lightblue;
+}
+
+form, .line-bloc{
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 5px;
+    width: 100%;
+}
+
+input {
+    display: block;
+}
+
+h1{
+    margin: 5px;
+}

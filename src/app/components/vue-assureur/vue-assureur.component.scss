@@ -1,33 +1,7 @@
-header, section {
-    font-family: 'century-gothic', Verdana;
-}
-
-section .line {
-    /* flex */
-    display: flex;
-    flex-flow: row nowrap ;
-    justify-content:space-around ;
-    align-items: flex-start;
-
-    /* forme */
-    padding: 10px;
+@import '../../../assets/scss/assureur';
+header h1 {
+    font-size: 1em;
     margin: 10px;
-    border-radius: 3px;
-
-    /* STYYYLE */
-    background-color: lightblue;
-}
-
-form{
-    background-color: white;
-    border-radius: 5px;
-    padding: 15px;
-}
-
-input {
-    display: block;
-}
-
-h1{
-    margin: 5px;
+    text-align: center;
+    border-bottom: 1px solid black;
 }

@@ -1,0 +1,28 @@
+<h1 id="page-title">Vue 360 -
+  <span>{{infosPersoForm.value.firstName}} {{infosPersoForm.value.lastName | uppercase}}</span></h1>
+<section class="line">
+  <form [formGroup]="infosPersoForm">
+    <h1>Infos personnelles</h1>
+    <label for="lastName">Nom</label>
+    <input formControlName="lastName" type="text" class="form-control" id="lastName">
+    <label for="firstName">Prénom(s)</label>
+    <input formControlName="firstName" type="text" class="form-control" id="firstName">
+    <label for="birthDate">Date de naissance</label>
+    <input formControlName="birthDate" type="date" class="form-control" id="birthDate">
+    <label for="birthPlace">Lieu de naissance</label>
+    <input formControlName="birthPlace" type="text" class="form-control" id="birthPlace">
+  </form>
+  <form>
+    <h1>Coordonnées</h1>
+    <label>Adresse</label>
+    <p></p>
+    <label>Email</label>
+    <p></p>
+  </form>
+  <div class="line-bloc">
+    <h1>Historique des contacts</h1>
+
+  </div>
+</section>
+<section class="line">
+</section>
