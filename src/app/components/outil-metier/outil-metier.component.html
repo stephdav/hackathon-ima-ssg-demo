@@ -2,20 +2,24 @@
   <h1>Form</h1>
   <form>
 
-    <div class="row">
-      <div id="Appelant" class="form-group col-sm-6">
-        <label for="Appelant">Appelant</label>
-        <label for="nomAppelant">Nom appelant</label>
-        <input type="text" class="form-control" id="nomAppelant" required>
-        <label for="telephone">Téléphone</label>
-        <input type="text" class="form-control" id="telephone" required>
+    <div class="form-row">
+
+      <div id="Appelant" class="boxed form-group col-6">
+        <label for="Appelant" class="labelfg">Appelant</label>
+        <label for="nomAppelant">Nom appelant
+          <input type="text" class="form-control" id="nomAppelant" required></label>
+        <br>
+        <label for="telephone">Téléphone
+          <input type="text" class="form-control" id="telephone" required></label>
       </div>
 
-      <div id="ClientNatureAssistance" class="form-group col-sm-6">
+      <div id="ClientNatureAssistance" class="boxed form-group col-6">
+        <label for="ClientNatureAssistance" class="labelfg">Client d'IMA - Nature d'assistance</label>
         <label for="clientIMA">Client d'IMA :</label>
         <select id="clientIMA" class="form-control">
           <option>Macif</option>
         </select>
+        <br>
         <label for="NatureAss">Nature Ass.:</label>
         <select id="NatureAss" class="form-control">
           <option>General</option>
@@ -23,22 +27,27 @@
       </div>
     </div>
 
-    <div id="Identification" class="form-group">
-
-      <div id="Souscripteur" class="form-group">
+    <div id="Identification" class="form-group col-6">
+      <label for="Identification" class="labelfg">Identification</label>
+      <div id="Souscripteur" class="form-group col-12">
+        <label for="Souscripteur" class="labelfg">Souscripteur</label>
         <label for="SocImmat">Soc/Immat</label>
         <input type="text" class="form-control" id="socImmat" required>
+
+
+        <div id="NomSocietaire" class="form-group col-12">
+          <label for="NomSocietaire" class="labelfg">Nom Sociétaire</label>
+          <input type="text" class="form-control" id="nomSocietaire" required>
+        </div>
+
+        <div id="SteEntrAsso" class="form-group col-12">
+          <label for="SteEntrAsso" class="labelfg">Sté, Entrepr, Asso</label>
+          <input type="text" class="form-control" id="steentrasso">
+        </div>
       </div>
 
-      <div id="NomSocietaire" class="form-group">
-        <input type="text" class="form-control" id="nomSocietaire" required>
-      </div>
-
-      <div id="SteEntrAsso" class="form-group">
-        <input type="text" class="form-control" id="steentrasso">
-      </div>
-
-      <div id="ProduitAssistance" class="form-group">
+      <div id="ProduitAssistance" class="form-group col-12">
+        <label for="ProduitAssistance" class="labelfg">Produit d'assistance</label>
         <label for="produit">Produit:</label>
         <select id="produit" class="form-control">
           <option>Deplacement</option>
@@ -54,7 +63,8 @@
     <!-- Partie droite -->
 
 
-    <div id="CauseIntervention" class="form-group">
+    <div id="CauseIntervention" class="form-group col-6">
+      <label for="CauseIntervention" class="labelfg">Cause d'intervention - Date de survenance</label>
       <label for="cause">Cause :</label>
       <select id="cause" class="form-control">
         <option>Veh.Evenement accidentel</option>
@@ -67,7 +77,8 @@
       <input type="text" class="form-control" id="dateSurv" required>
     </div>
 
-    <div id="Localisation" class="form-group">
+    <div id="Localisation" class="form-group col-6">
+        <label for="Localisation" class="labelfg">Localisation</label>
       <label for="adresse">Adresse:</label>
       <input type="text" class="form-control" id="adresse" required>
       <label for="ville">Ville :</label>
@@ -89,7 +100,8 @@
 
     </div>
 
-    <div id="IdentificationVehicule" class="form-group">
+    <div id="IdentificationVehicule" class="form-group col-6">
+        <label for="IdentificationVehicule" class="labelfg">Identification du Véhicule</label>
       <label for="marque">Marque :</label>
       <select id="marque" class="form-control">
         <option>Peugeot</option>
@@ -107,7 +119,8 @@
       </select>
     </div>
 
-    <div id="AutresElmts" class="form-group">
+    <div id="AutresElmts" class="form-group col-6">
+        <label for="AutresElmts" class="labelfg">Autres éléments</label>
       <input type="text" class="form-control" required>
       <label for="prediagnostic">Prédiagnostic :</label>
       <select id="prediagnostic" class="form-control">
@@ -115,11 +128,6 @@
       </select>
     </div>
 
-    <label for="genre">Genre :</label>
-    <select id="genre" class="form-control">
-      <option>VEH.DE TOURISME</option>
-      <option>UTILITAIRE</option>
-    </select>
 
     <button type="submit" class="btn btn-success">Submit</button>
 
