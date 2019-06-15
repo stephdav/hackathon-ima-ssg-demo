@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Form, FormGroup } from '@angular/forms';
+import { FormBuilder, Form, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-vue-assureur',
@@ -18,8 +18,10 @@ export class VueAssureurComponent implements OnInit {
 
   private initForms() {
     this.infosPersoForm = this.fb.group({
-      firstName: [''],
-      lastName: [''],
+      firstName: [{value: '', disabled: true}],
+      lastName: [{value: '', disabled: true}],
+      birthDate: [{value: '', disabled: true}],
+      birthPlace: [{value: '', disabled: true}]
     });
 
   }
