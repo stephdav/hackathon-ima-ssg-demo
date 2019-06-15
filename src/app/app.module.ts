@@ -4,9 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { OutilMetierComponent } from './components/outil-metier/outil-metier.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OutilMetierComponent
   ],
   imports: [
     BrowserModule,
