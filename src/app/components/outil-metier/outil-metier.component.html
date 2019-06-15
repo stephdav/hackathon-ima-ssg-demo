@@ -2,13 +2,25 @@
   <h1>Form</h1>
   <form>
 
-    <!-- Partie gauche -->
-    <div id="Appelant" class="form-group">
-      <label for="nomAppelant">Nom appelant</label>
-      <input type="text" class="form-control" id="nomAppelant" required>
-      <label for="telephone">Téléphone</label>
-      <input type="text" class="form-control" id="telephone" required>
+    <div class="row">
+      <div id="Appelant" class="form-group col-sm-6">
+        <label for="Appelant">Appelant</label>
+        <label for="nomAppelant">Nom appelant</label>
+        <input type="text" class="form-control" id="nomAppelant" required>
+        <label for="telephone">Téléphone</label>
+        <input type="text" class="form-control" id="telephone" required>
+      </div>
 
+      <div id="ClientNatureAssistance" class="form-group col-sm-6">
+        <label for="clientIMA">Client d'IMA :</label>
+        <select id="clientIMA" class="form-control">
+          <option>Macif</option>
+        </select>
+        <label for="NatureAss">Nature Ass.:</label>
+        <select id="NatureAss" class="form-control">
+          <option>General</option>
+        </select>
+      </div>
     </div>
 
     <div id="Identification" class="form-group">
@@ -40,16 +52,7 @@
     </div>
 
     <!-- Partie droite -->
-    <div id="ClientNatureAssistance" class="form-group">
-      <label for="clientIMA">Client d'IMA :</label>
-      <select id="clientIMA" class="form-control">
-        <option>Macif</option>
-      </select>
-      <label for="NatureAss">Nature Ass.:</label>
-      <select id="NatureAss" class="form-control">
-        <option>General</option>
-      </select>
-    </div>
+
 
     <div id="CauseIntervention" class="form-group">
       <label for="cause">Cause :</label>
