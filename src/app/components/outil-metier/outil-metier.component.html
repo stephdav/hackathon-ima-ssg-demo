@@ -1,15 +1,122 @@
 <div class="container">
   <h1>Form</h1>
   <form>
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" class="form-control" id="name" required>
+
+    <!-- Partie gauche -->
+    <div id="Appelant" class="form-group">
+      <label for="nomAppelant">Nom appelant</label>
+      <input type="text" class="form-control" id="nomAppelant" required>
+      <label for="telephone">Téléphone</label>
+      <input type="text" class="form-control" id="telephone" required>
+
     </div>
 
-    <div class="form-group">
-      <label for="alterEgo">Alter Ego</label>
-      <input type="text" class="form-control" id="alterEgo">
+    <div id="Identification" class="form-group">
+
+      <div id="Souscripteur" class="form-group">
+        <label for="SocImmat">Soc/Immat</label>
+        <input type="text" class="form-control" id="socImmat" required>
+      </div>
+
+      <div id="NomSocietaire" class="form-group">
+        <input type="text" class="form-control" id="nomSocietaire" required>
+      </div>
+
+      <div id="SteEntrAsso" class="form-group">
+        <input type="text" class="form-control" id="steentrasso">
+      </div>
+
+      <div id="ProduitAssistance" class="form-group">
+        <label for="produit">Produit:</label>
+        <select id="produit" class="form-control">
+          <option>Deplacement</option>
+        </select>
+        <label for="formule">Formule:</label>
+        <select id="formule" class="form-control">
+          <option>Ass Vehicule</option>
+        </select>
+      </div>
+
     </div>
+
+    <!-- Partie droite -->
+    <div id="ClientNatureAssistance" class="form-group">
+      <label for="clientIMA">Client d'IMA :</label>
+      <select id="clientIMA" class="form-control">
+        <option>Macif</option>
+      </select>
+      <label for="NatureAss">Nature Ass.:</label>
+      <select id="NatureAss" class="form-control">
+        <option>General</option>
+      </select>
+    </div>
+
+    <div id="CauseIntervention" class="form-group">
+      <label for="cause">Cause :</label>
+      <select id="cause" class="form-control">
+        <option>Veh.Evenement accidentel</option>
+      </select>
+      <label for="detailCause">Détail cause :</label>
+      <select id="detailCause" class="form-control">
+        <option>Accident Materiel</option>
+      </select>
+      <label for="dateSurv">Date Surv.*:</label>
+      <input type="text" class="form-control" id="dateSurv" required>
+    </div>
+
+    <div id="Localisation" class="form-group">
+      <label for="adresse">Adresse:</label>
+      <input type="text" class="form-control" id="adresse" required>
+      <label for="ville">Ville :</label>
+      <select id="ville" class="form-control">
+        <option>Brest</option>
+        <option>Niort</option>
+        <option>Paris</option>
+      </select>
+      <label for="pays">Pays :</label>
+      <select id="pays" class="form-control">
+        <option>France</option>
+        <option>Espagne</option>
+      </select>
+      <label for="region">Région :</label>
+      <select id="region" class="form-control">
+        <option>Poitou-Charente</option>
+        <option>Limousin</option>
+      </select>
+
+    </div>
+
+    <div id="IdentificationVehicule" class="form-group">
+      <label for="marque">Marque :</label>
+      <select id="marque" class="form-control">
+        <option>Peugeot</option>
+        <option>BMW</option>
+      </select>
+      <label for="modele">Modèle :</label>
+      <select id="modele" class="form-control">
+        <option>308</option>
+        <option>Serie 3</option>
+      </select>
+      <label for="genre">Genre :</label>
+      <select id="genre" class="form-control">
+        <option>VEH.DE TOURISME</option>
+        <option>UTILITAIRE</option>
+      </select>
+    </div>
+
+    <div id="AutresElmts" class="form-group">
+      <input type="text" class="form-control" required>
+      <label for="prediagnostic">Prédiagnostic :</label>
+      <select id="prediagnostic" class="form-control">
+        <option>XAccdt Veh Immo</option>
+      </select>
+    </div>
+
+    <label for="genre">Genre :</label>
+    <select id="genre" class="form-control">
+      <option>VEH.DE TOURISME</option>
+      <option>UTILITAIRE</option>
+    </select>
 
     <button type="submit" class="btn btn-success">Submit</button>
 
