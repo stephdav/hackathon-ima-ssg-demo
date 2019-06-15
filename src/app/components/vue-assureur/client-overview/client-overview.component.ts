@@ -14,6 +14,7 @@ export class ClientOverviewComponent implements OnInit {
 
   public client: Person;
   public infosPersoForm: FormGroup;
+  public coordonneesForm: FormGroup;
 
   ngOnInit() {
     this.client = this.personService.client;
@@ -27,6 +28,15 @@ export class ClientOverviewComponent implements OnInit {
       lastName: [ this.client.lastName],
       birthDate: [{ value: this.client.birthDate, disabled: true }],
       birthPlace: [{ value: this.client.birthPlace, disabled: true }]
+    });
+    this.coordonneesForm = this.fb.group({
+      email: this.client.email,
+      addressL1: this.client.address.addressLine1,
+      addressL2: this.client.address.addressLine2,
+      addressL3: this.client.address.addressLine3,
+      zipCode: this.client.address.zipCode,
+      city: this.client.address.city,
+      country: this.client.address.country
     });
   }
 }

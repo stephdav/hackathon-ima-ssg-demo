@@ -1,10 +1,12 @@
 export class Contact {
 
     constructor(object: any) {
-        if (object.contactDate) {  this.contactDate = object.contactDate; }
+        if (object.dateTime) {  this.dateTime = object.dateTime; }
+        if (object.context) {  this.context = object.context; }
         if (object.comments) {  this.comments = object.comments; }
         return this;
     }
-    contactDate: Date;
+    dateTime: string;
+    context: string;
     comments: string;
 }

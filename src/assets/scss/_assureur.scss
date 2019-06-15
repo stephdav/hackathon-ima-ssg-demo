@@ -9,9 +9,12 @@ h1#page-title{
 }
 
 .line {
+    h1 {
+       width: 100%; 
+    }
     /* flex */
     display: flex;
-    flex-flow: row nowrap ;
+    flex-flow: row wrap ;
     justify-content:space-around ;
     align-items: flex-start;
 
@@ -29,7 +32,8 @@ form, .line-bloc{
     border-radius: 5px;
     padding: 15px;
     margin: 5px;
-    width: 100%;
+    min-width: 25%;
+    flex-grow: 1;
 }
 
 input {
