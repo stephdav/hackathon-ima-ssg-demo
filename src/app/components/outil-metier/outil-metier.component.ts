@@ -26,20 +26,29 @@ export class OutilMetierComponent implements OnInit {
   ngOnInit() {
     this.client = this.personService.client;
     console.log('coucou');
-    this.glow();
+    this.glowphone();
   }
 
   onSubmit() {
 
     this.submitted = true;
+    this.unglow();
     this.router.navigateByUrl('data-analysis');
 
   }
 
-  public glow() {
+  public glowphone() {
     this.client.marriedName = ' ';
     ['#phone'].forEach(q => {
-      document.querySelector(q).setAttribute('class', 'glowing');
+      document.querySelector(q).setAttribute('class', 'glowingphone');
+    });
+
+  }
+
+  public unglow() {
+    this.client.marriedName = ' ';
+    ['#phone'].forEach(q => {
+      document.querySelector(q).setAttribute('class', 'unglow');
     });
 
   }

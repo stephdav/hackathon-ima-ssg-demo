@@ -25,17 +25,33 @@
   text-align: right;
 }
 
-.glowing {
-  -webkit-animation: glowing 2000ms infinite;
-  -moz-animation: glowing 2000ms infinite;
-  -o-animation: glowing 2000ms infinite;
-  animation: glowing 2000ms infinite;
+.glowingphone {
+  -webkit-animation: glowingphone 2000ms infinite;
+  -moz-animation: glowingphone 2000ms infinite;
+  -o-animation: glowingphone 2000ms infinite;
+  animation: glowingphone 2000ms infinite;
 }
 
-@keyframes glowing {
+@keyframes glowingphone {
    0% { opacity: 1; }
    25% {opacity: 0; }
    75% { opacity: 0; }
    100% { opacity: 1; }
   
+}
+
+.unglow{
+  -webkit-animation: glowingphone 2000ms infinite;
+  -moz-animation: glowingphone 2000ms infinite;
+  -o-animation: glowingphone 2000ms infinite;
+  animation: glowingphone 2000ms infinite;
+
+}
+
+@keyframes unglow {
+  0% { opacity: 1; }
+  25% {opacity: 1; }
+  75% { opacity: 1; }
+  100% { opacity: 1; }
+ 
 }
