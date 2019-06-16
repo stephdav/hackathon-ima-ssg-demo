@@ -8,9 +8,10 @@ export class PersonneService {
 
   constructor() { }
 
-// tslint:disable-next-line: variable-name
+  // tslint:disable-next-line: variable-name
   private _client: Person;
   private _new: Person;
+  private _glow: boolean;
 
   public getTestPerson(id?: number): Person {
     return new Person(testPerson as any);
@@ -20,12 +21,20 @@ export class PersonneService {
     return this._client ? this._client : this.getTestPerson();
   }
 
-  get new() {
-    return this._new;
-  }
-
   set client(person: Person) {
     this._new = person;
     this._client = person;
+  }
+
+  public activateGlow() {
+    this._glow = true;
+  }
+
+  get glow() {
+    return this._glow;
+  }
+
+  set glow(b: boolean){
+    this._glow = b;
   }
 }

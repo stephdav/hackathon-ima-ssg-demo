@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PersonneService } from 'src/app/service/personne.service';
 
 @Component({
   selector: 'app-data-analysis',
@@ -8,12 +9,13 @@ import { Router } from '@angular/router';
 })
 export class DataAnalysisComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private personneService: PersonneService) { }
 
   ngOnInit() {
   }
 
-  next(){
+  next() {
+    this.personneService.activateGlow();
     this.router.navigateByUrl('/vue-assureur');
   }
 }

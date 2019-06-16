@@ -19,6 +19,7 @@ export class ClientOverviewComponent implements OnInit {
 
   ngOnInit() {
     this.client = this.personService.client;
+    if (this.personService.glow) { this.glow(); }
     this.initForms();
   }
 
@@ -49,7 +50,7 @@ export class ClientOverviewComponent implements OnInit {
   }
 
   public glow() {
-    this.client.marriedName=" ";
+    this.client.marriedName = ' ';
     ['input#maritalStatus', '#opportunites', '#phone'].forEach(q => {
       document.querySelector(q).setAttribute('class', 'glowing');
     });
