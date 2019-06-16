@@ -34,6 +34,7 @@ export class ClientOverviewComponent implements OnInit {
     });
     this.coordonneesForm = this.fb.group({
       email: this.client.email,
+      phone: this.client.phone,
       addressL1: this.client.address.addressLine1,
       addressL2: this.client.address.addressLine2,
       addressL3: this.client.address.addressLine3,
@@ -45,6 +46,14 @@ export class ClientOverviewComponent implements OnInit {
 
   public only(filter: string, contract: Contrat[]) {
     return contract.filter(c => c.univers === filter);
+  }
+
+  public glow() {
+    this.client.marriedName=" ";
+    ['input#maritalStatus', '#opportunites', '#phone'].forEach(q => {
+      document.querySelector(q).setAttribute('class', 'glowing');
+    });
+
   }
 
 }

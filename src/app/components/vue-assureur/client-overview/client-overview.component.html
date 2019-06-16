@@ -1,13 +1,14 @@
 <h1 id="page-title">
   <a routerLink="/vue-assureur/basket" routerLinkActive="active"><</a> Vue 360 - <span>n°{{client.id}} -
-      {{client.firstName}} {{client.lastName | uppercase}}</span></h1>
+      {{client.firstName}} {{client.lastName | uppercase}}</span>
+      <span id="phone">Appeler<img  src="./../../../../assets/img/phone.png"/></span></h1>
 <div class="main">
   <div class="right">
     <section class="line">
       <form [formGroup]="infosPersoForm">
-        <h1>Infos personnelles</h1>
+        <h1 (click)="glow()">Infos personnelles</h1>
         <label for="lastName">Nom</label>
-        <input formControlName="lastName" type="text" class="form-control" id="lastName">
+        <input formControlName="lastName" type="text" class="form-control" id="lastName" >
         <label for="marriedName" *ngIf="client.marriedName">Nom d'usage</label>
         <input formControlName="marriedName" *ngIf="client.marriedName" type="text" class="form-control" id="marriedName">
         <label for="firstName">Prénom(s)</label>
@@ -20,15 +21,16 @@
       </form>
       <form [formGroup]="coordonneesForm">
         <h1>Coordonnées</h1>
+        <label for="phone">Téléphone</label>
+        <input formControlName="phone" type="text" class="form-control" >
         <label for="email">Email</label>
         <input formControlName="email" type="text" class="form-control" id="email">
         <label for="addressL1">Adresse :</label>
         <input formControlName="addressL1" type="text" class="form-control" id="addressL1">
         <input *ngIf="addressL2" formControlName="addressL2" type="text" class="form-control" id="addressL2">
         <input *ngIf="addressL3" formControlName="addressL3" type="text" class="form-control" id="addressL3">
-        <label for="city">Ville</label>
+        <input formControlName="zipCode" type="text" class="form-control" id="zipCode">
         <input formControlName="city" type="text" class="form-control" id="city">
-        <label for="country">Pays</label>
         <input formControlName="country" type="text" class="form-control" id="country">
       </form>
       <div class="line-bloc">
@@ -70,7 +72,7 @@
   </div>
   <div class="left">
     <section>
-      <div class="line-bloc">
+      <div class="line-bloc" id="opportunites">
         <h1>Opportunités</h1>
         <ul>
           <li *ngFor="let o of client.opportunities">

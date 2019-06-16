@@ -10,6 +10,7 @@ export class Person {
         if (object.id) { this.id = object.id; }
         if (object.firstName) { this.firstName = object.firstName; }
         if (object.lastName) { this.lastName = object.lastName; }
+        if (object.phone) { this.phone = object.phone; }
         if (object.marriedName) { this.marriedName = object.marriedName; }
         if (object.maritalStatus) { this.maritalStatus = object.maritalStatus; }
         if (object.birthDate) { this.birthDate = object.birthDate; }
@@ -41,6 +42,7 @@ export class Person {
     firstName?: string;
     lastName?: string;
     marriedName?: string;
+    phone?: string;
     maritalStatus?: string;
     birthDate?: Date;
     birthPlace?: string;
