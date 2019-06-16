@@ -74,7 +74,7 @@
     <section>
       <div class="line-bloc" id="opportunites">
         <h1>Opportunités</h1>
-        <ul>
+        <ul *ngIf="personService.glow">
           <li *ngFor="let o of client.opportunities">
             ({{o.trust}}%) {{o.desc}}
           </li>
