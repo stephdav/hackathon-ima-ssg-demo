@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <h1>Outil Gestion</h1>
+  <h1 style="text-align:center">Outil Gestion</h1>
   <br>
   <br>
   <form (submit)="onSubmit()">
@@ -44,8 +44,8 @@
         <div id="Identification" class="form-group">
           <label for="Identification" class="labelfg">Identification</label>
           <label for="dateDeNaissance">Souscripteur
-            <input type="text" class="form-control container-fluid" id="dateDeNaissance"
-              [(ngModel)]="this.client.id" [ngModelOptions]="{standalone: true}" required></label>
+            <input type="text" class="form-control container-fluid" id="dateDeNaissance" [(ngModel)]="this.client.id"
+              [ngModelOptions]="{standalone: true}" required></label>
           <br>
           <label for="lieuDeNaissance">Nom sociétaire
             <input type="text" value="{{client.firstName}} {{client.lastName | uppercase}}"></label>
@@ -64,6 +64,13 @@
                 <option>Ass Vehicule</option>
               </select></label>
           </div>
+        </div>
+        <div class="col-12">
+          <br>
+          <label>Communications : </label>
+          <br>
+          <textarea id="textarea" style="min-width: 100%;resize:none" rows="3" name="textarea" >
+</textarea>
         </div>
       </div>
 
@@ -119,39 +126,43 @@
 
         <div id="IdentificationVehicule" class="form-group">
           <label for="IdentificationVehicule" class="labelfg">Identification du Véhicule</label>
-          <label for="marque">Marque :</label>
-          <select id="marque" class="form-control">
-            <option>Peugeot</option>
-            <option>BMW</option>
-          </select>
+          <label for="marque">Marque :
+            <select id="marque" class="form-control">
+              <option>Peugeot</option>
+              <option>BMW</option>
+            </select></label>
           <br>
-          <label for="modele">Modèle :</label>
-          <select id="modele" class="form-control">
-            <option>308</option>
-            <option>Serie 3</option>
-          </select>
+          <label for="modele">Modèle :
+            <select id="modele" class="form-control">
+              <option>308</option>
+              <option>Serie 3</option>
+            </select></label>
           <br>
-          <label for="genre">Genre :</label>
-          <select id="genre" class="form-control">
-            <option>VEH.DE TOURISME</option>
-            <option>UTILITAIRE</option>
-          </select>
+          <label for="genre">Genre :
+            <select id="genre" class="form-control">
+              <option>VEH.DE TOURISME</option>
+              <option>UTILITAIRE</option>
+            </select></label>
         </div>
       </div>
 
       <div class="col-6">
         <div id="AutresElmts" class="form-group">
           <label for="AutresElmts" class="labelfg">Autres éléments</label>
-          <input type="text" class="form-control" required>
-          <label for="prediagnostic">Prédiagnostic :</label>
-          <select id="prediagnostic" class="form-control">
-            <option>XAccdt Veh Immo</option>
-          </select>
+          <label for="details">Détails :
+            <input type="text" class="form-control" id="details" required></label>
+          <br>
+          <label for="prediagnostic">Prédiagnostic :
+            <select id="prediagnostic" class="form-control">
+              <option>XAccdt Veh Immo</option>
+            </select></label>
         </div>
       </div>
     </div>
 
-    <button type="button" class="btn btn-success" (click)="onSubmit()">Submit</button>
+    <div class="text-center">
+      <button type="button" class="btn btn-success btn-lg" (click)="onSubmit()">Envoyer</button>
+    </div>
 
   </form>
 </div>
