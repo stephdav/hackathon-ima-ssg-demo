@@ -1,14 +1,17 @@
 <div class="container-fluid">
   <h1>Outil Gestion</h1>
-  <form>
+  <form (submit)="onSubmit()">
 
     <div class="row">
       <div class="col-6">
         <div id="Appelant" class="boxed form-group">
           <label for="Appelant" class="labelfg">Appelant</label>
           <label for="nomAppelant">Nom appelant
-            <input type="text" class="form-control container-fluid" id="nomAppelant" required></label>
+            <input type="text" class="form-control container-fluid" id="nomAppelant" [(ngModel)]="this.client.lastName" [ngModelOptions]="{standalone: true}" required></label>
           <br>
+          <label for="prenomAppelant">Prenom appelant
+              <input type="text" class="form-control container-fluid" id="prenomAppelant" [(ngModel)]="this.client.firstName" [ngModelOptions]="{standalone: true}" required></label>
+            <br>
           <label for="telephone">Téléphone
             <input type="text" class="form-control container-fluid" id="telephone" required></label>
         </div>
@@ -165,7 +168,7 @@
 
 
 
-    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="button" class="btn btn-success" (click)="onSubmit()">Submit</button>
 
   </form>
 </div>
