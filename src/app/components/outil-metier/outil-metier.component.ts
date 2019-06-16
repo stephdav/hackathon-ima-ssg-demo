@@ -1,23 +1,36 @@
-import { Component } from '@angular/core';
-
-import { Formulaire } from './formulaire';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Person } from 'src/app/models/Person';
+import { PersonneService } from 'src/app/service/personne.service';
+import { Contrat } from 'src/app/models/Contrat';
 
 @Component({
   selector: 'app-outil-metier',
   templateUrl: './outil-metier.component.html',
   styleUrls: ['./outil-metier.component.scss']
 })
-export class OutilMetierComponent {
+export class OutilMetierComponent implements OnInit {
 
-  powers = ['Really Smart', 'Super Flexible',
-            'Super Hot', 'Weather Changer'];
+  constructor(private fb: FormBuilder, private personService: PersonneService) { }
 
-  model = new Formulaire(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
+  public client: Person;
+  public infosPersoForm: FormGroup;
+  public coordonneesForm: FormGroup;
 
   submitted = false;
 
-  onSubmit() { this.submitted = true; }
+  nomAppelant: string;
 
-  // TODO: Remove this when we're done
-  get diagnostic() { return JSON.stringify(this.model); }
+  ngOnInit(){
+    this.client = this.personService.client;
+    console.log('coucou');
+  }
+
+  onSubmit() {
+
+    this.submitted = true;
+    console.log('nom : ', this.client.firstName);
+
+  }
+
 }

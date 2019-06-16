@@ -1,14 +1,17 @@
 <div class="container-fluid">
   <h1>Outil Gestion</h1>
-  <form>
+  <form (submit)="onSubmit()">
 
     <div class="row">
       <div class="col-6">
         <div id="Appelant" class="boxed form-group">
           <label for="Appelant" class="labelfg">Appelant</label>
           <label for="nomAppelant">Nom appelant
-            <input type="text" class="form-control container-fluid" id="nomAppelant" required></label>
+            <input type="text" class="form-control container-fluid" id="nomAppelant" [(ngModel)]="this.client.lastName" [ngModelOptions]="{standalone: true}" required></label>
           <br>
+          <label for="prenomAppelant">Prenom appelant
+              <input type="text" class="form-control container-fluid" id="prenomAppelant" [(ngModel)]="this.client.firstName" [ngModelOptions]="{standalone: true}" required></label>
+            <br>
           <label for="telephone">Téléphone
             <input type="text" class="form-control container-fluid" id="telephone" required></label>
         </div>
@@ -28,6 +31,8 @@
         </div>
       </div>
     </div>
+
+    <br><br>
 
     <div class="row">
       <div class="col-6">
@@ -54,7 +59,7 @@
               </div>
             </div>
           </div>
-
+          <br>
           <div class="col-12">
             <div id="ProduitAssistance" class="form-group">
               <label for="ProduitAssistance" class="labelfg">Produit d'assistance</label>
@@ -78,7 +83,7 @@
       <div class="col-6">
         <div class="form-group" style="border:none; margin:-10px;">
           <div class="col-12">
-            <div id="CauseIntervention" class="form-group">
+            <div id="CauseIntervention" class="boxed form-group form-adjust">
               <label for="CauseIntervention" class="labelfg">Cause d'intervention - Date de survenance</label>
               <label for="cause">Cause :
                 <select id="cause" class="form-control">
@@ -94,9 +99,9 @@
                 <input type="text" class="form-control" id="dateSurv" required></label>
             </div>
           </div>
-
+          <br>
           <div class="col-12">
-            <div id="Localisation" class="form-group">
+            <div id="Localisation" class="boxed form-group">
               <label for="Localisation" class="labelfg">Localisation</label>
               <label for="adresse">Adresse:
                 <input type="text" class="form-control" id="adresse" required></label>
@@ -126,7 +131,8 @@
 
     </div>
 
-
+    <br><br>
+    
     <div class="row">
 
       <div class="col-6">
@@ -165,7 +171,7 @@
 
 
 
-    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="button" class="btn btn-success" (click)="onSubmit()">Submit</button>
 
   </form>
 </div>
