@@ -1,28 +1,80 @@
 <h1 id="page-title">Vue 360 -
-  <span>{{infosPersoForm.value.firstName}} {{infosPersoForm.value.lastName | uppercase}}</span></h1>
-<section class="line">
-  <form [formGroup]="infosPersoForm">
-    <h1>Infos personnelles</h1>
-    <label for="lastName">Nom</label>
-    <input formControlName="lastName" type="text" class="form-control" id="lastName">
-    <label for="firstName">Prénom(s)</label>
-    <input formControlName="firstName" type="text" class="form-control" id="firstName">
-    <label for="birthDate">Date de naissance</label>
-    <input formControlName="birthDate" type="date" class="form-control" id="birthDate">
-    <label for="birthPlace">Lieu de naissance</label>
-    <input formControlName="birthPlace" type="text" class="form-control" id="birthPlace">
-  </form>
-  <form>
-    <h1>Coordonnées</h1>
-    <label>Adresse</label>
-    <p></p>
-    <label>Email</label>
-    <p></p>
-  </form>
-  <div class="line-bloc">
-    <h1>Historique des contacts</h1>
-
+  <span>n°{{client.id}} - {{client.firstName}} {{client.lastName | uppercase}}</span></h1>
+<div class="main">
+  <div class="right">
+    <section class="line">
+      <form [formGroup]="infosPersoForm">
+        <h1>Infos personnelles</h1>
+        <label for="lastName">Nom</label>
+        <input formControlName="lastName" type="text" class="form-control" id="lastName">
+        <label for="firstName">Prénom(s)</label>
+        <input formControlName="firstName" type="text" class="form-control" id="firstName">
+        <label for="birthDate">Date de naissance</label>
+        <input formControlName="birthDate" type="date" class="form-control" id="birthDate">
+        <label for="birthPlace">Lieu de naissance</label>
+        <input formControlName="birthPlace" type="text" class="form-control" id="birthPlace">
+      </form>
+      <form [formGroup]="coordonneesForm">
+        <h1>Coordonnées</h1>
+        <label for="email">Email</label>
+        <input formControlName="email" type="text" class="form-control" id="email">
+        <label for="addressL1">Adresse :</label>
+        <input formControlName="addressL1" type="text" class="form-control" id="addressL1">
+        <input *ngIf="addressL2" formControlName="addressL2" type="text" class="form-control" id="addressL2">
+        <input *ngIf="addressL3" formControlName="addressL3" type="text" class="form-control" id="addressL3">
+        <label for="city">Ville</label>
+        <input formControlName="city" type="text" class="form-control" id="city">
+        <label for="country">Pays</label>
+        <input formControlName="country" type="text" class="form-control" id="country">
+        <p></p>
+      </form>
+      <div class="line-bloc">
+        <h1>Historique des contacts</h1>
+        <ul>
+          <li *ngFor="let c of client.history">
+            <input type="" value="{{c.dateTime | date: 'dd/MM/yy HH:mm'}}"> - {{c.context}}
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="line">
+      <h1>Contrats</h1>
+      <div class="line-bloc">
+        <h1>Univers Auto</h1>
+        <ul>
+          <li *ngFor="let c of only('AUTO',client.contracts)">
+            {{c.desc}}
+          </li>
+        </ul>
+      </div>
+      <div class="line-bloc">
+        <h1>Univers habitation</h1>
+        <ul>
+          <li *ngFor="let c of only('HABITATION',client.contracts)">
+            {{c.desc}}
+          </li>
+        </ul>
+      </div>
+      <div class="line-bloc">
+        <h1>Univers santé</h1>
+        <ul>
+          <li *ngFor="let c of only('SANTE',client.contracts)">
+            {{c.desc}}
+          </li>
+        </ul>
+      </div>
+    </section>
   </div>
-</section>
-<section class="line">
-</section>
+  <div class="left">
+    <section>
+      <div class="line-bloc">
+        <h1>Opportunités</h1>
+        <ul>
+          <li *ngFor="let o of client.opportunities">
+            ({{o.trust}}%) {{o.desc}}
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</div>

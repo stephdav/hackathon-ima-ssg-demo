@@ -1,7 +1,15 @@
 @import '../../../assets/scss/assureur';
-header h1 {
-    font-size: 1em;
-    margin: 10px;
-    text-align: center;
-    border-bottom: 1px solid black;
+header {
+    height: 40px;
+    h1 {
+        font-size: 1em;
+        margin: 10px;
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+    img {
+        display: inline;
+        max-height: 40px;
+        float: left;
+    }
 }
