@@ -1,1 +1,17 @@
 @import '../../../../assets/scss/assureur';
+h1, section {
+    margin-left: 150px !important;
+    margin-right: 150px !important;
+}
+
+p, a {
+    margin: 15px 50px;
+        color: black;
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        span {
+            font-weight: 800;
+        }
+    }
+}

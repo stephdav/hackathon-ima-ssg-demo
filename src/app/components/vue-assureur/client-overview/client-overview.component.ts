@@ -27,8 +27,10 @@ export class ClientOverviewComponent implements OnInit {
       id: [this.client.id],
       firstName: [this.client.firstName],
       lastName: [this.client.lastName],
-      birthDate: [{ value: this.client.birthDate, disabled: true }],
-      birthPlace: [{ value: this.client.birthPlace, disabled: true }]
+      marriedName: [this.client.marriedName],
+      maritalStatus: this.client.maritalStatus,
+      birthDate: [this.client.birthDate],
+      birthPlace: [this.client.birthPlace]
     });
     this.coordonneesForm = this.fb.group({
       email: this.client.email,
@@ -44,4 +46,5 @@ export class ClientOverviewComponent implements OnInit {
   public only(filter: string, contract: Contrat[]) {
     return contract.filter(c => c.univers === filter);
   }
+
 }

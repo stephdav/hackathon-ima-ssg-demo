@@ -2,6 +2,8 @@
     "id": 98761234,
     "firstName": "Alice",
     "lastName": "De Nice",
+    "marriedName": "",
+    "maritalStatus":"CELIBATAIRE",
     "birthDate": "1987-10-10",
     "birthPlace": "Argelès-les-Vallées",
     "email": "alice.denice@yolo.fr",
@@ -15,9 +17,9 @@
     },
     "history": [
         {
-            "dateTime": "2012-10-05T17:48:00",
+            "dateTime": "2016-10-95T14:48:00",
             "context": "AUTO",
-            "comments": "Panne de batterie au retour du travail. Besoin d'aller récupérer les enfants à l'école."
+            "comments": "Rétroviseur cassé alors que la voiture était garée dans la rue. Toujours utilisable avec du scotch mais commandes électriques inopérantes et structure cassée."
         },
         {
             "dateTime": "2015-02-15T14:48:00",
@@ -25,9 +27,9 @@
             "comments": "Dégât des eaux suite à l'explosion du chauffe-eau."
         },
         {
-            "dateTime": "2016-10-95T14:48:00",
+            "dateTime": "2012-10-05T17:48:00",
             "context": "AUTO",
-            "comments": "Rétroviseur cassé alors que la voiture était garée dans la rue. Toujours utilisable avec du scotch mais commandes électriques inopérantes et structure cassée."
+            "comments": "Panne de batterie au retour du travail. Besoin d'aller récupérer les enfants à l'école."
         }
     ],
     "contracts": [
