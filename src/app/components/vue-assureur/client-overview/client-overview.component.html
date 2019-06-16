@@ -1,7 +1,7 @@
 <h1 id="page-title">
   <a routerLink="/vue-assureur/basket" routerLinkActive="active"><</a> Vue 360 - <span>n°{{client.id}} -
       {{client.firstName}} {{client.lastName | uppercase}}</span>
-      <span id="phone">Appeler<img  src="./../../../../assets/img/phone.png"/></span></h1>
+      <span id="phone">Appeler<img  src="./../../../../assets/img/phone2..png"/></span></h1>
 <div class="main">
   <div class="right">
     <section class="line">
@@ -17,7 +17,7 @@
         <input formControlName="birthDate" type="date" class="form-control" id="birthDate">
          à <input formControlName="birthPlace" type="text" class="form-control" id="birthPlace"><br>
          <label for="maritalStatus">Statut marital</label>
-         <input formControlName="maritalStatus" type="text" class="form-control" id="maritalStatus">
+         <input title="{{toolTipMariage()}}" formControlName="maritalStatus" type="text" class="form-control" id="maritalStatus">
       </form>
       <form [formGroup]="coordonneesForm">
         <h1>Coordonnées</h1>
@@ -74,8 +74,8 @@
     <section>
       <div class="line-bloc" id="opportunites">
         <h1>Opportunités</h1>
-        <ul *ngIf="personService.glow">
-          <li *ngFor="let o of client.opportunities">
+        <ul *ngIf="personService.glow" matTooltip="test" >
+          <li *ngFor="let o of client.opportunities;let i = index" title="{{toolTipOpp(i)}}">
             ({{o.trust}}%) {{o.desc}}
           </li>
         </ul>

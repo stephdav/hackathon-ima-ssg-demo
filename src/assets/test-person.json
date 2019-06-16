@@ -3,8 +3,8 @@
     "firstName": "Alice",
     "lastName": "De Nice",
     "marriedName": "",
-    "phone":"0607080910",
-    "maritalStatus":"CELIBATAIRE",
+    "phone": "0607080910",
+    "maritalStatus": "CELIBATAIRE",
     "birthDate": "1987-10-10",
     "birthPlace": "Argelès-les-Vallées",
     "email": "alice.denice@yolo.fr",
@@ -45,12 +45,16 @@
     ],
     "opportunities": [
         {
+            "desc": "Remplacement voiture",
+            "trust": 90
+        },
+        {
             "desc": "Déménagement",
             "trust": 80
         },
         {
-            "desc": "Remplacement voiture",
-            "trust": 90
+            "desc": "Situation maritale",
+            "trust": 70
         },
         {
             "desc": "Bébé",
