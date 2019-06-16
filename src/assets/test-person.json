@@ -2,6 +2,8 @@
     "id": 98761234,
     "firstName": "Alice",
     "lastName": "De Nice",
+    "marriedName": "",
+    "maritalStatus":"CELIBATAIRE",
     "birthDate": "1987-10-10",
     "birthPlace": "Argelès-les-Vallées",
     "email": "alice.denice@yolo.fr",

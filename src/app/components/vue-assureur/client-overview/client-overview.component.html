@@ -8,12 +8,15 @@
         <h1>Infos personnelles</h1>
         <label for="lastName">Nom</label>
         <input formControlName="lastName" type="text" class="form-control" id="lastName">
+        <label for="marriedName" *ngIf="client.marriedName">Nom d'usage</label>
+        <input formControlName="marriedName" *ngIf="client.marriedName" type="text" class="form-control" id="marriedName">
         <label for="firstName">Prénom(s)</label>
         <input formControlName="firstName" type="text" class="form-control" id="firstName">
-        <label for="birthDate">Date de naissance</label>
+        <label for="birthDate">Date et lieu de naissance</label><br>
         <input formControlName="birthDate" type="date" class="form-control" id="birthDate">
-        <label for="birthPlace">Lieu de naissance</label>
-        <input formControlName="birthPlace" type="text" class="form-control" id="birthPlace">
+         à <input formControlName="birthPlace" type="text" class="form-control" id="birthPlace"><br>
+         <label for="maritalStatus">Statut marital</label>
+         <input formControlName="maritalStatus" type="text" class="form-control" id="maritalStatus">
       </form>
       <form [formGroup]="coordonneesForm">
         <h1>Coordonnées</h1>
@@ -27,7 +30,6 @@
         <input formControlName="city" type="text" class="form-control" id="city">
         <label for="country">Pays</label>
         <input formControlName="country" type="text" class="form-control" id="country">
-        <p></p>
       </form>
       <div class="line-bloc">
         <h1>Historique des contacts</h1>

@@ -10,6 +10,8 @@ export class Person {
         if (object.id) { this.id = object.id; }
         if (object.firstName) { this.firstName = object.firstName; }
         if (object.lastName) { this.lastName = object.lastName; }
+        if (object.marriedName) { this.marriedName = object.marriedName; }
+        if (object.maritalStatus) { this.maritalStatus = object.maritalStatus; }
         if (object.birthDate) { this.birthDate = object.birthDate; }
         if (object.birthPlace) { this.birthPlace = object.birthPlace; }
         if (object.email) { this.email = object.email; }
@@ -38,6 +40,8 @@ export class Person {
     id?: number;
     firstName?: string;
     lastName?: string;
+    marriedName?: string;
+    maritalStatus?: string;
     birthDate?: Date;
     birthPlace?: string;
     address?: Address;

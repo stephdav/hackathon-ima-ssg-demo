@@ -10,6 +10,7 @@ export class PersonneService {
 
 // tslint:disable-next-line: variable-name
   private _client: Person;
+  private _new: Person;
 
   public getTestPerson(id?: number): Person {
     return new Person(testPerson as any);
@@ -19,7 +20,12 @@ export class PersonneService {
     return this._client ? this._client : this.getTestPerson();
   }
 
+  get new() {
+    return this._new;
+  }
+
   set client(person: Person) {
+    this._new = person;
     this._client = person;
   }
 }

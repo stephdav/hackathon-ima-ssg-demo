@@ -19,3 +19,25 @@ li {
         border-style: none;
     }
 }
+
+label {
+    font-size: 1em;
+    margin-bottom: 1px;
+}
+
+input {
+    height: 1.5em;
+    background: #f3f1f1;
+    font-size: 1.1em;
+    border: none;
+    &:hover{
+        border: 1px solid grey;
+    }
+}
+
+#birthDate, #birthPlace {
+    display: inline-block;
+    max-width: 40%;
+    margin: 0;
+    padding: 0;
+}

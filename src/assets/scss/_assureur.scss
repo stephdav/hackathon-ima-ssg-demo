@@ -2,7 +2,7 @@
 
 header, section {
     font-family: 'century-gothic', Verdana;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 h1#page-title{
@@ -25,6 +25,7 @@ h1#page-title{
         width: 25%;
         section {
             width: 100%;
+            font-size: 1.2em;
         }
     }
     .right {
@@ -53,6 +54,7 @@ h1#page-title{
 
 form, .line-bloc{
     background-color: white;
+    box-shadow: 0px 0px 5px -1px #827A7D;
     border-radius: 5px;
     padding: 15px;
     margin: 5px;
