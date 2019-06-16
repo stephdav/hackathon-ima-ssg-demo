@@ -10,6 +10,7 @@ import { VueAssureurComponent } from './components/vue-assureur/vue-assureur.com
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BasketComponent } from './components/vue-assureur/basket/basket.component';
 import { ClientOverviewComponent } from './components/vue-assureur/client-overview/client-overview.component';
+import { DataAnalysisComponent } from './components/data-analysis/data-analysis.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ClientOverviewComponent } from './components/vue-assureur/client-overvi
     OutilMetierComponent,
     VueAssureurComponent,
     BasketComponent,
-    ClientOverviewComponent
+    ClientOverviewComponent,
+    DataAnalysisComponent
   ],
   imports: [
     BrowserAnimationsModule,

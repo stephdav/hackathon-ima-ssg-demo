@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Person } from 'src/app/models/Person';
 import { PersonneService } from 'src/app/service/personne.service';
 import { Contrat } from 'src/app/models/Contrat';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-outil-metier',
@@ -11,7 +12,8 @@ import { Contrat } from 'src/app/models/Contrat';
 })
 export class OutilMetierComponent implements OnInit {
 
-  constructor(private fb: FormBuilder, private personService: PersonneService) { }
+  constructor(private fb: FormBuilder, private personService: PersonneService,
+    private router: Router) { }
 
   public client: Person;
   public infosPersoForm: FormGroup;
@@ -21,7 +23,7 @@ export class OutilMetierComponent implements OnInit {
 
   nomAppelant: string;
 
-  ngOnInit(){
+  ngOnInit() {
     this.client = this.personService.client;
     console.log('coucou');
   }
@@ -29,7 +31,7 @@ export class OutilMetierComponent implements OnInit {
   onSubmit() {
 
     this.submitted = true;
-    console.log('nom : ', this.client.firstName);
+    this.router.navigateByUrl('data-analysis');
 
   }
 

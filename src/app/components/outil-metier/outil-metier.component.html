@@ -43,13 +43,12 @@
       <div class="col-6">
         <div id="Identification" class="form-group">
           <label for="Identification" class="labelfg">Identification</label>
-          <label for="dateDeNaissance">Date de Naissance
+          <label for="dateDeNaissance">Souscripteur
             <input type="text" class="form-control container-fluid" id="dateDeNaissance"
-              [(ngModel)]="this.client.birthDate" [ngModelOptions]="{standalone: true}" required></label>
+              [(ngModel)]="this.client.id" [ngModelOptions]="{standalone: true}" required></label>
           <br>
-          <label for="lieuDeNaissance">Lieu de Naissance
-            <input type="text" class="form-control container-fluid" id="lieuDeNaissance"
-              [(ngModel)]="this.client.birthPlace" [ngModelOptions]="{standalone: true}" required></label>
+          <label for="lieuDeNaissance">Nom sociétaire
+            <input type="text" value="{{client.firstName}} {{client.lastName | uppercase}}"></label>
         </div>
         <br>
         <div class="col-12">
@@ -151,8 +150,6 @@
         </div>
       </div>
     </div>
-
-
 
     <button type="button" class="btn btn-success" (click)="onSubmit()">Submit</button>
 
