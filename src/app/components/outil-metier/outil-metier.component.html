@@ -1,132 +1,168 @@
-<div class="container">
-  <h1>Form</h1>
+<div class="container-fluid">
+  <h1>Outil Gestion</h1>
   <form>
 
-    <div class="form-row">
-
-      <div id="Appelant" class="boxed form-group col-6">
-        <label for="Appelant" class="labelfg">Appelant</label>
-        <label for="nomAppelant">Nom appelant
-          <input type="text" class="form-control" id="nomAppelant" required></label>
-        <br>
-        <label for="telephone">Téléphone
-          <input type="text" class="form-control" id="telephone" required></label>
-      </div>
-
-      <div id="ClientNatureAssistance" class="boxed form-group col-6">
-        <label for="ClientNatureAssistance" class="labelfg">Client d'IMA - Nature d'assistance</label>
-        <label for="clientIMA">Client d'IMA :</label>
-        <select id="clientIMA" class="form-control">
-          <option>Macif</option>
-        </select>
-        <br>
-        <label for="NatureAss">Nature Ass.:</label>
-        <select id="NatureAss" class="form-control">
-          <option>General</option>
-        </select>
-      </div>
-    </div>
-
-    <div id="Identification" class="form-group col-6">
-      <label for="Identification" class="labelfg">Identification</label>
-      <div id="Souscripteur" class="form-group col-12">
-        <label for="Souscripteur" class="labelfg">Souscripteur</label>
-        <label for="SocImmat">Soc/Immat</label>
-        <input type="text" class="form-control" id="socImmat" required>
-
-
-        <div id="NomSocietaire" class="form-group col-12">
-          <label for="NomSocietaire" class="labelfg">Nom Sociétaire</label>
-          <input type="text" class="form-control" id="nomSocietaire" required>
-        </div>
-
-        <div id="SteEntrAsso" class="form-group col-12">
-          <label for="SteEntrAsso" class="labelfg">Sté, Entrepr, Asso</label>
-          <input type="text" class="form-control" id="steentrasso">
+    <div class="row">
+      <div class="col-6">
+        <div id="Appelant" class="boxed form-group">
+          <label for="Appelant" class="labelfg">Appelant</label>
+          <label for="nomAppelant">Nom appelant
+            <input type="text" class="form-control container-fluid" id="nomAppelant" required></label>
+          <br>
+          <label for="telephone">Téléphone
+            <input type="text" class="form-control container-fluid" id="telephone" required></label>
         </div>
       </div>
+      <div class="col-6">
+        <div id="ClientNatureAssistance" class="boxed form-group form-adjust">
+          <label for="ClientNatureAssistance" class="labelfg">Client d'IMA - Nature d'assistance</label>
+          <label for="clientIMA">Client d'IMA :</label>
+          <select id="clientIMA" class="form-control">
+            <option>Macif</option>
+          </select>
+          <br>
+          <label for="NatureAss">Nature Ass.:</label>
+          <select id="NatureAss" class="form-control">
+            <option>General</option>
+          </select>
+        </div>
+      </div>
+    </div>
 
-      <div id="ProduitAssistance" class="form-group col-12">
-        <label for="ProduitAssistance" class="labelfg">Produit d'assistance</label>
-        <label for="produit">Produit:</label>
-        <select id="produit" class="form-control">
-          <option>Deplacement</option>
-        </select>
-        <label for="formule">Formule:</label>
-        <select id="formule" class="form-control">
-          <option>Ass Vehicule</option>
-        </select>
+    <div class="row">
+      <div class="col-6">
+        <div id="Identification" class="form-group">
+          <label for="Identification" class="labelfg">Identification</label>
+          <div class="col-12">
+            <div id="Souscripteur" class="form-group">
+              <label for="Souscripteur" class="labelfg">Souscripteur</label>
+              <label for="SocImmat">Soc/Immat</label>
+              <input type="text" class="form-control" id="socImmat" required>
+
+              <div class="col-12">
+                <div id="NomSocietaire" class="form-group">
+                  <label for="NomSocietaire" class="labelfg">Nom Sociétaire</label>
+                  <input type="text" class="form-control" id="nomSocietaire" required>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div id="SteEntrAsso" class="form-group">
+                  <label for="SteEntrAsso" class="labelfg">Sté, Entrepr, Asso</label>
+                  <input type="text" class="form-control" id="steentrasso">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div id="ProduitAssistance" class="form-group">
+              <label for="ProduitAssistance" class="labelfg">Produit d'assistance</label>
+              <label for="produit">Produit:
+                <select id="produit" class="form-control">
+                  <option>Deplacement</option>
+                </select></label>
+              <br>
+              <label for="formule">Formule:
+                <select id="formule" class="form-control">
+                  <option>Ass Vehicule</option>
+                </select></label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <div class="col-6">
+        <div class="form-group" style="border:none; margin:-10px;">
+          <div class="col-12">
+            <div id="CauseIntervention" class="form-group">
+              <label for="CauseIntervention" class="labelfg">Cause d'intervention - Date de survenance</label>
+              <label for="cause">Cause :
+                <select id="cause" class="form-control">
+                  <option>Veh.Evenement accidentel</option>
+                </select></label>
+              <br>
+              <label for="detailCause">Détail cause :
+                <select id="detailCause" class="form-control">
+                  <option>Accident Materiel</option>
+                </select></label>
+              <br>
+              <label for="dateSurv">Date Surv.*:
+                <input type="text" class="form-control" id="dateSurv" required></label>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div id="Localisation" class="form-group">
+              <label for="Localisation" class="labelfg">Localisation</label>
+              <label for="adresse">Adresse:
+                <input type="text" class="form-control" id="adresse" required></label>
+              <br>
+              <label for="ville">Ville :
+                <select id="ville" class="form-control">
+                  <option>Brest</option>
+                  <option>Niort</option>
+                  <option>Paris</option>
+                </select></label>
+              <br>
+              <label for="pays">Pays :
+                <select id="pays" class="form-control">
+                  <option>France</option>
+                  <option>Espagne</option>
+                </select></label>
+              <br>
+              <label for="region">Région :
+                <select id="region" class="form-control">
+                  <option>Poitou-Charente</option>
+                  <option>Limousin</option>
+                </select></label>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
 
-    <!-- Partie droite -->
 
+    <div class="row">
 
-    <div id="CauseIntervention" class="form-group col-6">
-      <label for="CauseIntervention" class="labelfg">Cause d'intervention - Date de survenance</label>
-      <label for="cause">Cause :</label>
-      <select id="cause" class="form-control">
-        <option>Veh.Evenement accidentel</option>
-      </select>
-      <label for="detailCause">Détail cause :</label>
-      <select id="detailCause" class="form-control">
-        <option>Accident Materiel</option>
-      </select>
-      <label for="dateSurv">Date Surv.*:</label>
-      <input type="text" class="form-control" id="dateSurv" required>
+      <div class="col-6">
+
+        <div id="IdentificationVehicule" class="form-group">
+          <label for="IdentificationVehicule" class="labelfg">Identification du Véhicule</label>
+          <label for="marque">Marque :</label>
+          <select id="marque" class="form-control">
+            <option>Peugeot</option>
+            <option>BMW</option>
+          </select>
+          <label for="modele">Modèle :</label>
+          <select id="modele" class="form-control">
+            <option>308</option>
+            <option>Serie 3</option>
+          </select>
+          <label for="genre">Genre :</label>
+          <select id="genre" class="form-control">
+            <option>VEH.DE TOURISME</option>
+            <option>UTILITAIRE</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div id="AutresElmts" class="form-group">
+          <label for="AutresElmts" class="labelfg">Autres éléments</label>
+          <input type="text" class="form-control" required>
+          <label for="prediagnostic">Prédiagnostic :</label>
+          <select id="prediagnostic" class="form-control">
+            <option>XAccdt Veh Immo</option>
+          </select>
+        </div>
+      </div>
     </div>
 
-    <div id="Localisation" class="form-group col-6">
-        <label for="Localisation" class="labelfg">Localisation</label>
-      <label for="adresse">Adresse:</label>
-      <input type="text" class="form-control" id="adresse" required>
-      <label for="ville">Ville :</label>
-      <select id="ville" class="form-control">
-        <option>Brest</option>
-        <option>Niort</option>
-        <option>Paris</option>
-      </select>
-      <label for="pays">Pays :</label>
-      <select id="pays" class="form-control">
-        <option>France</option>
-        <option>Espagne</option>
-      </select>
-      <label for="region">Région :</label>
-      <select id="region" class="form-control">
-        <option>Poitou-Charente</option>
-        <option>Limousin</option>
-      </select>
-
-    </div>
-
-    <div id="IdentificationVehicule" class="form-group col-6">
-        <label for="IdentificationVehicule" class="labelfg">Identification du Véhicule</label>
-      <label for="marque">Marque :</label>
-      <select id="marque" class="form-control">
-        <option>Peugeot</option>
-        <option>BMW</option>
-      </select>
-      <label for="modele">Modèle :</label>
-      <select id="modele" class="form-control">
-        <option>308</option>
-        <option>Serie 3</option>
-      </select>
-      <label for="genre">Genre :</label>
-      <select id="genre" class="form-control">
-        <option>VEH.DE TOURISME</option>
-        <option>UTILITAIRE</option>
-      </select>
-    </div>
-
-    <div id="AutresElmts" class="form-group col-6">
-        <label for="AutresElmts" class="labelfg">Autres éléments</label>
-      <input type="text" class="form-control" required>
-      <label for="prediagnostic">Prédiagnostic :</label>
-      <select id="prediagnostic" class="form-control">
-        <option>XAccdt Veh Immo</option>
-      </select>
-    </div>
 
 
     <button type="submit" class="btn btn-success">Submit</button>
