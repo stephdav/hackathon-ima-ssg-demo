@@ -24,3 +24,18 @@
 .btn.btn-success{
   text-align: right;
 }
+
+.glowing {
+  -webkit-animation: glowing 2000ms infinite;
+  -moz-animation: glowing 2000ms infinite;
+  -o-animation: glowing 2000ms infinite;
+  animation: glowing 2000ms infinite;
+}
+
+@keyframes glowing {
+   0% { opacity: 1; }
+   25% {opacity: 0; }
+   75% { opacity: 0; }
+   100% { opacity: 1; }
+  
+}
