@@ -11,7 +11,7 @@ import { Contrat } from 'src/app/models/Contrat';
 })
 export class ClientOverviewComponent implements OnInit {
 
-  constructor(private fb: FormBuilder, private personService: PersonneService) { }
+  constructor(private fb: FormBuilder, public personService: PersonneService) { }
 
   public client: Person;
   public infosPersoForm: FormGroup;
