@@ -60,20 +60,9 @@ input {
 }
 
 @keyframes glowing {
-    0% { background-color: white; }
-    25% {background-color: #fa1111; }
-    75% { background-color: white; }
-    100% { background-color: white; }
+    0% { border-radius: 5px; padding: 5px; background-color: white; }
+    25% { border-radius: 5px; padding: 5px; background-color: #fa1111; }
+    75% {  border-radius: 5px;padding: 5px;  background-color: white; }
+    100% { border-radius: 5px; padding: 5px;  background-color: white; }
    
 }
-/*  0% { font-weight: 400 }
-    10% {font-weight: 300 }
-    20% {font-weight: 300 }
-    30% { font-weight: 400 }
-    40% { font-weight: 500 }
-    50% {font-weight: 600 }
-    60% {font-weight: 700 }
-    70% {font-weight: 800 }
-    80% {font-weight: 700 }
-    90% {font-weight: 600 }
-    100% { font-weight: 500 } */

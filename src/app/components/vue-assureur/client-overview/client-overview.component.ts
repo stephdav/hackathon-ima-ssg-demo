@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Person } from 'src/app/models/Person';
 import { PersonneService } from 'src/app/service/personne.service';
 import { Contrat } from 'src/app/models/Contrat';
+import { MatTooltipModule } from '@angular/material';
 
 @Component({
   selector: 'app-client-overview',
@@ -54,7 +55,18 @@ export class ClientOverviewComponent implements OnInit {
     ['input#maritalStatus', '#opportunites', '#phone'].forEach(q => {
       document.querySelector(q).setAttribute('class', 'glowing');
     });
+  }
 
+  public toolTipMariage() {
+    console.log("Info Situation maritale à vérifier (confiance 70%)");
+    return this.personService.glow ? "Info Situation maritale à vérifier (confiance 70%)" : ""
+  }
+  public toolTipOpp(i: number) {
+    const info = this.client.opportunities[i].desc;
+    const trust = this.client.opportunities[i].trust;
+    return this.personService.glow
+      ? `Info ${info} à valoriser (confiance ${trust}%)`
+      : "";
   }
 
 }
